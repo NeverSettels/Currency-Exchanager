@@ -24,7 +24,9 @@ let getSpecific = () => {
     let from = $('#from').val()
     let to = $('#to').val()
     let exchangeService = new ExchangeApi();
-    const response = await exchangeService.specificExchange(from, to)
+    console.log(amount);
+
+    const response = await exchangeService.specificExchange(from, to, amount)
     console.log(response);
 
   })
@@ -43,5 +45,6 @@ $(document).ready(() => {
   (async () => {
     await initialPopulate();
     formListener();
+    getSpecific();
   })()
 });
