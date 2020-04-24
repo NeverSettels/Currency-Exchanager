@@ -5,6 +5,9 @@ body{
   align-items: center;
   background-image: url('https://i.pinimg.com/originals/ea/b1/a3/eab1a312169b43448807e64e46382441.jpg');
   background-size: 100%;
+  background-position: center;
+  background-color: black;
+  background-repeat: no-repeat;
   color: whitesmoke;
 }
 #currencies-box{
