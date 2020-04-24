@@ -1,10 +1,13 @@
 export class ExchangeApi {
   async exchangeRates() {
     try {
+      console.log("try api");
+
       let response = await fetch(`https://prime.exchangerate-api.com/v5/${process.env.API_KEY}/latest/USD`);
       let jsonifiedResponse;
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
+        console.log("fail here? ok");
       } else {
         console.log("fail here?");
 
