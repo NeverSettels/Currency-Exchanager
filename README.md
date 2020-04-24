@@ -37,7 +37,6 @@ If you have any questions, comments, or concerns, feel free to contact the conte
 
 ## **Future Plans**
 
-* Allow user to search by symtoms 
 
 ## **Technologies used**
 

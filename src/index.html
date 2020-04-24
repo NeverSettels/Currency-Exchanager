@@ -10,24 +10,30 @@
 </head>
 
 <body>
-  <div id="specific-conversion">
+  <div id="specific-conversion" class="my-cont">
+    <h3>Convert an amount from any currency to anonther</h3>
     <form id="stbc">
-      <input requierd type="number" id="amount2" step="any" min=1>
+      <input requierd type="number" id="amount2" step="any" min=1 placeholder="Convert">
+      <p>from</p>
       <select id="from">
       </select>
+      <p>to</p>
       <select id="to">
       </select>
       <button type="submit">Convert</button>
     </form>
     <div>
-      <p>Your result: </p><span id="result"></span>
+      <p>Your result: <span id="result"></span></p></span>
     </div>
   </div>
-  <form id="tbc">
-    <input requierd type="number" id="amount" step="any" min=1>
-    <button type="submit">Convert</button>
-  </form>
-  <div id="currencies-box"></div>
+  <div class="my-cont">
+    <h3>Check going rate of all Currencies against the US Dollar</h3>
+    <form id="tbc">
+      <input requierd type="number" id="amount" step="any" min=1 placeholder="Amount">
+      <button type="submit">Convert</button>
+    </form>
+    <div id="currencies-box"></div>
+  </div>
 </body>
 
 </html>
