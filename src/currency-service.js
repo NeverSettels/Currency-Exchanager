@@ -22,10 +22,7 @@ export class ExchangeApi {
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
         let { conversion_rates } = jsonifiedResponse;
-
         return amount * conversion_rates[to];
-
-
       } else {
         jsonifiedResponse = false;
       }
