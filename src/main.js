@@ -24,7 +24,6 @@ let getSpecific = () => {
     let exchangeService = new ExchangeApi();
     const response = await exchangeService.specificExchange(from, to, amount)
     $('#result').text(response);
-
   })
 }
 let formListener = () => {

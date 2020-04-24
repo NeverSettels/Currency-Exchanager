@@ -8,13 +8,6 @@
 
 _This program will allow a user toconvert currencies in an easy way._
 
-## **Behavior Driven Development**
-
-| Behavior | Input | Output |
-|----------|:-----:|--------|
-
-
-
 ## **Setup/Installation**
 
 1. Step one: Open up your terminal
@@ -22,8 +15,8 @@ _This program will allow a user toconvert currencies in an easy way._
 3. Step three: Clone this repository.
 4. Step four: Open the repository.
 5. Step Five: Get an api key from  [Exchangerate-api](https://www.exchangerate-api.com/)
-6. Step Six: Open Repository and add .env file and create variable called API_KEY and st it equal to your key. 
-7. Step seven: Run npm start on your terminal. 
+6. Step Six: Open Repository and add .env file and create variable called API_KEY and set it equal to your key. 
+7. Step seven: Run npm run start on your terminal. 
 8. Step Eight: Enjoy site. 
 
 
@@ -34,8 +27,6 @@ There are no known bugs at this time.
 ## **Support and contact details**
 
 If you have any questions, comments, or concerns, feel free to contact the content creator at settels.eric@gmail.com 
-
-## **Future Plans**
 
 
 ## **Technologies used**
