@@ -5,6 +5,7 @@ body{
   align-items: center;
   background-image: url('https://i.pinimg.com/originals/ea/b1/a3/eab1a312169b43448807e64e46382441.jpg');
   background-size: 100%;
+  color: whitesmoke;
 }
 #currencies-box{
 display: flex;
@@ -13,7 +14,7 @@ display: flex;
   align-content: space-around;
   align-items:center;
   padding: 1rem;
-  border-radius: 5px;
+  
 }
 
 #currencies-box div{
@@ -24,11 +25,11 @@ display: flex;
   font-weight: bold;
 }
 .up{
-  color: green;
+  color: rgb(0, 174, 0);
   font-weight: bold;
 }
 .down{
-  color: brown;
+  color: rgb(194, 12, 12);
   font-weight: bold;
 }
 
@@ -40,11 +41,27 @@ display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px lightgray solid;
+  border-radius: 5px;
 }
 .my-cont form{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
   width: 60%;
-  height: 4vh;
+  margin: 1rem;
+}
+.my-cont form p{ 
+  margin-top: 2%;
+}
+#result-box{
+  margin: 2rem;
+}
+#result-box span{
+  color: goldenrod;
+  font-weight: bolder;
+}
+h3{
+  text-align: center;
 }
