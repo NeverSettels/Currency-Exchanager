@@ -6,6 +6,8 @@ export class ExchangeApi {
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
       } else {
+        console.log("fail here?");
+
         jsonifiedResponse = false;
       }
       return jsonifiedResponse;
