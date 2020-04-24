@@ -14,14 +14,15 @@ let initialPopulate = async () => {
   let valueArr = Object.values(conversion_rates)
   currencyArr.forEach(currency => {
     $("#currencies-box").append(`<div id="${currency[0]}" class="exchange-pair" ><span class="country-code">${currency[0]}</span> : <span value="${currency[1]}" class=${currency[1] >= 1 ? "up" : "down"}>${currency[1]}</span>  <div>`)
+    $('#from, #to').append(`<option value="${currency[1]}">${currency[0]}</option>`)
   })
 }
 let formListener = () => {
   $('#tbc').submit(event => {
-    event.preventDefault;
+    event.preventDefault();
     let amount = parseFloat($('#amount').val())
-    $(".exchange-pair.up", ".exchange-pair.down").each(() => {
-      let exchangeRate = parseFloat($(this).val())
+    $(".exchange-pair .up, .exchange-pair .down").each(function () {
+      let exchangeRate = parseFloat($(this).text())
       $(this).text(exchangeRate * amount);
     })
   })
@@ -29,16 +30,6 @@ let formListener = () => {
 $(document).ready(() => {
   (async () => {
     await initialPopulate();
-  })();
-  $('#tbc').submit(event => {
-    event.preventDefault();
-    let amount = parseFloat($('#amount').val())
-    $(".exchange-pair .up, .exchange-pair .down").each(function () {
-      console.log($(this).text());
-
-      let exchangeRate = parseFloat($(this).text())
-      $(this).text(exchangeRate * amount);
-    })
-  })
-
+    formListener();
+  })()
 });
