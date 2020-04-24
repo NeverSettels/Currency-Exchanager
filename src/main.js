@@ -9,6 +9,7 @@ let initialPopulate = async () => {
   let exchangeService = new ExchangeApi();
   const response = await exchangeService.exchangeRates()
   let { conversion_rates } = await response;
+  console.log(response)
   let currencyArr = Object.entries(conversion_rates)
   currencyArr.forEach(currency => {
     $("#currencies-box").append(`<div id="${currency[0]}" class="exchange-pair" ><span class="country-code">${currency[0]}</span> : <span value="${currency[1]}" class=${currency[1] >= 1 ? "up" : "down"}>${currency[1]}</span>  <div>`)
