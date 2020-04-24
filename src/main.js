@@ -10,8 +10,6 @@ let initialPopulate = async () => {
   const response = await exchangeService.exchangeRates()
   let { conversion_rates } = response;
   let currencyArr = Object.entries(conversion_rates)
-  let countryArr = Object.keys(conversion_rates)
-  let valueArr = Object.values(conversion_rates)
   currencyArr.forEach(currency => {
     $("#currencies-box").append(`<div id="${currency[0]}" class="exchange-pair" ><span class="country-code">${currency[0]}</span> : <span value="${currency[1]}" class=${currency[1] >= 1 ? "up" : "down"}>${currency[1]}</span>  <div>`)
     $('#from, #to').append(`<option value="${currency[0]}">${currency[0]}</option>`)
@@ -24,8 +22,6 @@ let getSpecific = () => {
     let from = $('#from').val()
     let to = $('#to').val()
     let exchangeService = new ExchangeApi();
-    console.log(amount);
-
     const response = await exchangeService.specificExchange(from, to, amount)
     $('#result').text(response);
 

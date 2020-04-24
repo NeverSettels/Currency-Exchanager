@@ -5,14 +5,13 @@ export class ExchangeApi {
       let jsonifiedResponse;
       if (response.ok && response.status == 200) {
         jsonifiedResponse = await response.json();
-        //console.log(jsonifiedResponse);
       } else {
         jsonifiedResponse = false;
       }
       return jsonifiedResponse;
     } catch (error) {
       console.log(error);
-      return false;
+      return error;
     }
   }
   async specificExchange(from, to, amount) {
@@ -29,7 +28,7 @@ export class ExchangeApi {
       return jsonifiedResponse;
     } catch (error) {
       console.log(error);
-      return false;
+      return error;
     }
   }
 }
