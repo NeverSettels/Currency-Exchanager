@@ -19,6 +19,7 @@ _This program will allow a user toconvert currencies in an easy way._
 7. Step seven: Run npm run start on your terminal. 
 8. Step Eight: Enjoy site. 
 
+or enjoy it at [Global exchange](https://confident-bartik-6f707a.netlify.app/)
 
 ## **Known Bugs**
 
