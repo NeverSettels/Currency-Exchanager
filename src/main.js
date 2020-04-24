@@ -27,7 +27,7 @@ let getSpecific = () => {
     console.log(amount);
 
     const response = await exchangeService.specificExchange(from, to, amount)
-    console.log(response);
+    $('#result').text(response);
 
   })
 }
